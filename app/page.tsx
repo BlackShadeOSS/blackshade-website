@@ -9,7 +9,7 @@ export default function Page() {
     return (
         <div className="flex w-full flex-col gap-12 pb-8">
             <section
-                className="grid grid-cols-1 items-center gap-4 lg:grid-cols-2"
+                className="grid grid-cols-1 items-center gap-4 lg:grid-cols-2 mb-4"
                 id="aboutMe"
             >
                 <motion.div
@@ -59,7 +59,7 @@ export default function Page() {
                 </motion.div>
             </section>
             <section
-                className="grid grid-cols-1 items-center gap-4 lg:grid-cols-2"
+                className="grid grid-cols-1 items-center gap-4 lg:grid-cols-2 mb-10"
                 id="aboutOmegaSpace"
             >
                 <motion.div
@@ -140,6 +140,40 @@ export default function Page() {
                             "java",
                             "cpp",
                         ]}
+                        status="inprogress"
+                    />
+                    <Card
+                        title="Project 2"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                        purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
+                        tincidunt aliquam."
+                        languages={[
+                            "javascript",
+                            "typescript",
+                            "rust",
+                            "csharp",
+                            "python",
+                            "java",
+                            "cpp",
+                        ]}
+                        status="paused"
+                    />
+                    <Card
+                        title="Project 3"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                        purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
+                        tincidunt aliquam."
+                        languages={[
+                            "javascript",
+                            "typescript",
+                            "rust",
+                            "csharp",
+                            "python",
+                            "java",
+                            "cpp",
+                        ]}
+                        status="completed"
+                        repo="github.com/BlackShadeOSS/blackshade-website"
                     />
                 </div>
             </motion.section>

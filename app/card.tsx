@@ -1,22 +1,37 @@
 "use client";
 import "./globals.css";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 type CardProps = {
     title: string;
     description: string;
     languages: LanguageKey[];
-    status: string;
+    status: StatusKey;
+    repo?: string;
 };
 type LanguageKey = keyof typeof colors;
 
+type StatusKey = keyof typeof statusColors;
+
 const statusColors = {
     completed: "#00ff00",
-    inprogress: "#ff0000",
-    paused: "#ffaa00",
+    inprogress: "#fbe83a",
+    paused: "#ff5f0e",
 };
 
-// language match colors
+const statusText = {
+    completed: "Completed",
+    inprogress: "In Progress",
+    paused: "Paused",
+};
+
+const statusTextColors = {
+    completed: "#000",
+    inprogress: "#000",
+    paused: "#000",
+};
+
 const colors = {
     javascript: "#efd81d",
     typescript: "#2f74c0",
@@ -27,7 +42,6 @@ const colors = {
     cpp: "#005697",
 };
 
-// language match correct names
 const fullnames = {
     javascript: "JavaScript",
     typescript: "TypeScript",
@@ -38,7 +52,6 @@ const fullnames = {
     cpp: "C++",
 };
 
-// language match text colors
 const textColors = {
     javascript: "#000",
     typescript: "#000",
@@ -49,7 +62,13 @@ const textColors = {
     cpp: "#fff",
 };
 
-export default function Card({ title, description, languages }: CardProps) {
+export default function Card({
+    title,
+    description,
+    languages,
+    status,
+    repo = "",
+}: CardProps) {
     return (
         <motion.div
             whileHover={{ scale: [null, 1.05] }}
@@ -60,8 +79,46 @@ export default function Card({ title, description, languages }: CardProps) {
                 <p className="px-4 pt-5 text-lg text-left line-clamp-3">
                     {description}
                 </p>
-                <p className="px-4 text-xl text-left my-6">Project Status: </p>
-                <div className="flex gap-2 px-4 pb-4 mt-12 overflow-x-hidden">
+                <div className="flex">
+                    <p className="px-4 text-xl text-left mt-6 mb-4 py-2 align-middle w-1/2">
+                        Status:{" "}
+                        <span
+                            className="rounded px-2 py-1 text-lg font-semibold ml-2"
+                            style={{
+                                backgroundColor: statusColors[status],
+                                color: statusTextColors[status],
+                            }}
+                        >
+                            {statusText[status]}
+                        </span>
+                    </p>
+                    <p className="px-4 text-xl text-right mt-6 mb-4 py-2 align-middle w-1/2">
+                        Repo:{" "}
+                        {repo ? (
+                            <a
+                                href={`https://${repo}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded px-2 py-1 text-lg font-semibold ml-2 bg-coalblack"
+                            >
+                                <Image
+                                    src="/github-mark-white.svg"
+                                    alt="github logo mr-2"
+                                    className="inline center"
+                                    width={22}
+                                    height={22}
+                                />
+                                {"  "}
+                                Public
+                            </a>
+                        ) : (
+                            <span className="rounded px-2 py-1 text-lg font-semibold ml-2 bg-coalblack">
+                                Private
+                            </span>
+                        )}
+                    </p>
+                </div>
+                <div className="flex gap-2 px-4 pb-4 mt-6 overflow-x-hidden">
                     {languages &&
                         languages.map((lang) => (
                             <div
