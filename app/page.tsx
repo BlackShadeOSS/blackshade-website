@@ -109,8 +109,8 @@ export default function Page() {
                                 and game development.
                             </li>
                             <li>
-                                OmegaSpaceSystems is focused on aerospace and
-                                rocket engineering.
+                                OmegaSpaceSystems is focused on various
+                                engineering fields like aerospace.
                             </li>
                         </ul>
                     </motion.div>
@@ -127,29 +127,26 @@ export default function Page() {
                 </h2>
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <Card
-                        title="Project 1"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-                        purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
-                        tincidunt aliquam."
-                        languages={["javascript", "typescript"]}
+                        title="Daito Stories"
+                        description="Daito Stories is 2.5D dungeon crawler game made in Unreal Engine 5. 
+                        More information soon."
+                        languages={["cpp", "ue5"]}
                         status="inprogress"
+                        by="OmegaSpaceDev"
                     />
                     <Card
-                        title="Project 2"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-                        purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
-                        tincidunt aliquam."
-                        languages={["rust", "csharp"]}
-                        status="paused"
-                    />
-                    <Card
-                        title="Project 3"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-                        purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
-                        tincidunt aliquam."
-                        languages={["python", "java", "cpp"]}
+                        title="LMCSS"
+                        description="LMCSS is a unity script that dynamicly updates a list of toggles so user can select a input device. It's designed for local multiplayer games."
+                        languages={["csharp", "unity"]}
                         status="completed"
-                        repo="github.com/BlackShadeOSS/blackshade-website"
+                        repo="github.com/BlackShadeOSS/LocalMultiplayerControllerSelectionScript"
+                    />
+                    <Card
+                        title="MECB"
+                        description="MECB is a Modular Exhaust and CanBox for Voron2.4 printer. It's designed to support multiple toolheads with or without a exhaust filters."
+                        languages={["fusion360"]}
+                        status="completed"
+                        repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
                     />
                 </div>
             </motion.section>

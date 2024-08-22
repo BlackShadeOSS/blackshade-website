@@ -9,10 +9,13 @@ type CardProps = {
     languages: LanguageKey[];
     status: StatusKey;
     repo?: string;
+    by?: ByKey;
 };
 type LanguageKey = keyof typeof colors;
 
 type StatusKey = keyof typeof statusColors;
+
+type ByKey = keyof typeof byLogo;
 
 const statusColors = {
     completed: "#00ff00",
@@ -40,6 +43,9 @@ const colors = {
     python: "#3572a5",
     java: "#e25040",
     cpp: "#005697",
+    ue5: "#000",
+    unity: "#c3cbd0",
+    fusion360: "#f6792e",
 };
 
 const fullnames = {
@@ -50,6 +56,9 @@ const fullnames = {
     python: "Python",
     java: "Java",
     cpp: "C++",
+    ue5: "Unreal Engine 5",
+    unity: "Unity",
+    fusion360: "Fusion 360",
 };
 
 const textColors = {
@@ -60,6 +69,15 @@ const textColors = {
     python: "#fff",
     java: "#fff",
     cpp: "#fff",
+    ue5: "#fff",
+    unity: "#000",
+    fusion360: "#fff",
+};
+
+const byLogo = {
+    BlackShade: "/avatar-round.png",
+    OmegaSpaceDev: "/OSS-logo.png",
+    OmegaSpaceSystems: "/OSS-logo.png",
 };
 
 export default function Card({
@@ -68,6 +86,7 @@ export default function Card({
     languages,
     status,
     repo = "",
+    by = "BlackShade",
 }: CardProps) {
     return (
         <motion.div
@@ -75,8 +94,17 @@ export default function Card({
             transition={{ duration: 0.4 }}
         >
             <div className="h-80 w-full bg-ashgrey rounded-lg p-5">
-                <h3 className="text-left text-3xl px-4">{title}</h3>
-                <p className="px-4 pt-5 text-lg text-left line-clamp-3">
+                <div className="flex justify-between">
+                    <h3 className="text-left text-3xl px-4">{title}</h3>
+                    <Image
+                        src={byLogo[by]}
+                        alt="BlackShade logo"
+                        className="rounded-full inline ml-2 mb-1.5 h-10 w-auto"
+                        width={40}
+                        height={40}
+                    />
+                </div>
+                <p className="px-4 pt-5 text-lg text-left line-clamp-3 h-26">
                     {description}
                 </p>
                 <div className="flex">
@@ -124,7 +152,7 @@ export default function Card({
                         )}
                     </p>
                 </div>
-                <div className="flex gap-2 px-4 pb-4 mt-6 overflow-x-hidden">
+                <div className="flex gap-2 px-4 py-2 overflow-x-hidden">
                     {languages &&
                         languages.map((lang) => (
                             <div

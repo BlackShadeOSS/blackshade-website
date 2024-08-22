@@ -19,7 +19,10 @@ const config: Config = {
         obsidian: '#0B1215',
         coalblack: '#0c0d0e',
         ashgrey: '#1d1f20',
-      }
+      },
+      height: {
+        26: "6.5rem",
+      },
     },
   },
   plugins: [],
