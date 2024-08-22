@@ -22,14 +22,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html
-            lang="pl"
-            className="scroll-smooth overflow-x-hidden bg-coalblack"
-        >
+        <html lang="pl" className="scroll-smooth overflow-x-hidden">
             <body className="">
-                <NavBar />
-                {children}
-                <Footer />
+                <div className="h-full w-full bg-coalblack">
+                    <div className="container mx-auto flex h-full min-h-screen flex-col px-8 py-4 bg-coalblack">
+                        <NavBar />
+                        {children}
+                        <Footer />
+                    </div>
+                </div>
             </body>
         </html>
     );
