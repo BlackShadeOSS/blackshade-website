@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./textTyper";
+import Card from "./card";
 
 export default function Page() {
     return (
@@ -119,12 +120,19 @@ export default function Page() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 2 }}
-                className="grid grid-cols-1 items-center gap-4 lg:grid-cols-2 mt-10"
+                className="flex flex-col gap-8 mt-10"
             >
-                <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary">
+                <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary mb-10">
                     Projects
                 </h2>
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3"></div>
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <Card
+                        title="Project 1"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                        purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
+                        tincidunt aliquam."
+                    />
+                </div>
             </motion.section>
         </div>
     );
