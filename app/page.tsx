@@ -131,15 +131,7 @@ export default function Page() {
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                         purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
                         tincidunt aliquam."
-                        languages={[
-                            "javascript",
-                            "typescript",
-                            "rust",
-                            "csharp",
-                            "python",
-                            "java",
-                            "cpp",
-                        ]}
+                        languages={["javascript", "typescript"]}
                         status="inprogress"
                     />
                     <Card
@@ -147,15 +139,7 @@ export default function Page() {
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                         purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
                         tincidunt aliquam."
-                        languages={[
-                            "javascript",
-                            "typescript",
-                            "rust",
-                            "csharp",
-                            "python",
-                            "java",
-                            "cpp",
-                        ]}
+                        languages={["rust", "csharp"]}
                         status="paused"
                     />
                     <Card
@@ -163,15 +147,7 @@ export default function Page() {
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                         purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
                         tincidunt aliquam."
-                        languages={[
-                            "javascript",
-                            "typescript",
-                            "rust",
-                            "csharp",
-                            "python",
-                            "java",
-                            "cpp",
-                        ]}
+                        languages={["python", "java", "cpp"]}
                         status="completed"
                         repo="github.com/BlackShadeOSS/blackshade-website"
                     />

@@ -13,14 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        midnightblue: '#101720',
+        deepnavyblue: '#011222',
+        obsidian: '#0B1215',
+        coalblack: '#0c0d0e',
+        ashgrey: '#1d1f20',
+      }
     },
-    colors: {
-      midnightblue: '#101720',
-      deepnavyblue: '#011222',
-      obsidian: '#0B1215',
-      coalblack: '#0c0d0e',
-      ashgrey: '#1d1f20',
-    }
   },
   plugins: [],
 };

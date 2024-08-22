@@ -71,7 +71,7 @@ export default function Card({
 }: CardProps) {
     return (
         <motion.div
-            whileHover={{ scale: [null, 1.05] }}
+            whileHover={{ scale: [null, 1.015] }}
             transition={{ duration: 0.4 }}
         >
             <div className="h-80 w-full bg-ashgrey rounded-lg p-5">
@@ -99,20 +99,26 @@ export default function Card({
                                 href={`https://${repo}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="rounded px-2 py-1 text-lg font-semibold ml-2 bg-coalblack"
+                                className="rounded px-2 py-1 text-lg font-semibold ml-2 bg-coalblack hover:text-sky-500 duration-500"
                             >
                                 <Image
                                     src="/github-mark-white.svg"
-                                    alt="github logo mr-2"
-                                    className="inline center"
-                                    width={22}
-                                    height={22}
+                                    alt="github logo"
+                                    className="inline mr-1.5 mb-1.5"
+                                    width={23}
+                                    height={23}
                                 />
-                                {"  "}
                                 Public
                             </a>
                         ) : (
-                            <span className="rounded px-2 py-1 text-lg font-semibold ml-2 bg-coalblack">
+                            <span className="rounded px-2 py-1 text-lg font-semibold ml-2 bg-coalblack hover:text-red-600 duration-500">
+                                <Image
+                                    src="/lock.svg"
+                                    alt="lock icon"
+                                    className="inline mr-1.5 mb-1.5"
+                                    width={23}
+                                    height={23}
+                                />
                                 Private
                             </span>
                         )}
