@@ -131,7 +131,15 @@ export default function Page() {
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                         purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
                         tincidunt aliquam."
-                        languages={["javascript", "typescript"]}
+                        languages={[
+                            "javascript",
+                            "typescript",
+                            "rust",
+                            "csharp",
+                            "python",
+                            "java",
+                            "cpp",
+                        ]}
                     />
                 </div>
             </motion.section>
