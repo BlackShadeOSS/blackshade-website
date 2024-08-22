@@ -16,6 +16,7 @@ type AnimatedTextProps = {
         visible: Variant;
     };
     speed?: number;
+    delay?: number;
 };
 
 const defaultAnimations = {
@@ -40,6 +41,7 @@ export const AnimatedText = ({
     repeatDelay,
     animation = defaultAnimations,
     speed = 0.1,
+    delay = 0,
 }: AnimatedTextProps) => {
     const controls = useAnimation();
     const textArray = Array.isArray(text) ? text : [text];
@@ -74,6 +76,7 @@ export const AnimatedText = ({
                 ref={ref}
                 initial="hidden"
                 animate={controls}
+                transition={{ delay: delay }}
                 variants={{
                     visible: { transition: { staggerChildren: speed } },
                     hidden: {},
