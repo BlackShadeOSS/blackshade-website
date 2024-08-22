@@ -17,7 +17,8 @@ const config: Config = {
     colors: {
       midnightblue: '#101720',
       deepnavyblue: '#011222',
-      obsidian: '#0B1215'
+      obsidian: '#0B1215',
+      coalblack: '#0c0d0e',
     }
   },
   plugins: [],
