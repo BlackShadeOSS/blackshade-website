@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./textTyper";
 import Card from "./card";
@@ -131,14 +132,6 @@ export default function Page() {
                 </h2>
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <Card
-                        title="Daito Stories"
-                        description="Daito Stories is 2.5D dungeon crawler game made in Unreal Engine 5. 
-                        More information soon."
-                        languages={["cpp", "ue5"]}
-                        status="inprogress"
-                        by="OmegaSpaceDev"
-                    />
-                    <Card
                         title="LMCSS"
                         description="LMCSS is a unity script that dynamicly updates a list of toggles so user can select a input device. It's designed for local multiplayer games."
                         languages={["csharp", "unity"]}
@@ -153,20 +146,6 @@ export default function Page() {
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
                     />
                     <Card
-                        title="BlackMessages"
-                        description="BlackMessages is a location based chat app. Designed for people who want to chat with others in their area."
-                        languages={["dart", "flutter"]}
-                        status="paused"
-                        by="OmegaSpaceDev"
-                    />
-                    <Card
-                        title="Navix"
-                        description="Navix is a modular avionics board for OmegaSpaceSystems. It's designed to be used in various aerospace projects."
-                        languages={["kicad"]}
-                        status="paused"
-                        by="OmegaSpaceSystems"
-                    />
-                    <Card
                         title="Space Odyssey 2"
                         description="Space Odyssey 2 is a space race game made using Canvas. It was made as a final project for my first year of high school."
                         languages={["html", "css", "javascript"]}
@@ -174,6 +153,19 @@ export default function Page() {
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
                     />
+                </div>
+                <div className="flex justify-center gap-4 h-28 mt-10">
+                    <motion.div
+                        whileHover={{ scale: 1.025 }}
+                        transition={{ duration: 0.33 }}
+                        className="hover:cursor-pointer text-white hover:text-sky-400 duration-500"
+                    >
+                        <Link href="/projects">
+                            <span className="bg-ashgrey px-12 py-6 rounded-lg text-3xl font-semibold ">
+                                View all projects
+                            </span>
+                        </Link>
+                    </motion.div>
                 </div>
             </motion.section>
             <motion.section
@@ -204,7 +196,7 @@ export default function Page() {
                     />
                     <ContactCard
                         title="LinkedIn"
-                        link="https://www.linkedin.com/in/tomasz-tarnawski-682341290/"
+                        link="https://www.linkedin.com/in/tomasz-tarnawski/"
                         logo="linkedin"
                     />
                     <ContactCard
