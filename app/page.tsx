@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AnimatedText } from "./textTyper";
 import Card from "./card";
 import ContactCard from "./contactCard";
-import { KofiButton } from "react-kofi-button";
+import KofiButton from "./kofiButton";
 
 export default function Page() {
     return (
@@ -216,9 +216,12 @@ export default function Page() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.75, delay: 1.25 }}
-                    className="flex gap-4 h-28"
+                    className="flex gap-4 h-28 mt-4"
                 >
-                    <KofiButton username="blackshade" label="Buy me a coffee" />
+                    <KofiButton
+                        link="https://ko-fi.com/blackshadeoss"
+                        message="Support me on Ko-fi"
+                    />
                 </motion.div>
             </motion.section>
         </div>

@@ -3,7 +3,7 @@ import "./globals.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-type CardProps = {
+type ContactCardProps = {
     title: string;
     link: string;
     logo: keyof typeof logos;
@@ -17,7 +17,7 @@ const logos = {
     linkedin: "/linkedin-logo.svg",
 };
 
-export default function ContactCard({ title, link, logo }: CardProps) {
+export default function ContactCard({ title, link, logo }: ContactCardProps) {
     return (
         <a href={link} target="_blank">
             <motion.div
