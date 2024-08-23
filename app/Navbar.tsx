@@ -23,7 +23,14 @@ const NavBar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#contact">
+                        <Link href="/omegaspaceteam">
+                            <span className="px-3 py-2 text-white text-2xl">
+                                OmegaSpaceTeam
+                            </span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/#contact">
                             <span className="px-3 py-2 text-white text-2xl">
                                 Contact
                             </span>

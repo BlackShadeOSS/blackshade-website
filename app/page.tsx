@@ -118,6 +118,25 @@ export default function Page() {
                             </li>
                         </ul>
                     </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: +100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.75, delay: 1.75 }}
+                        className="text-xl text-white text-center mb-10 lg:mb-0"
+                    >
+                        <motion.div
+                            whileHover={{ scale: 1.025 }}
+                            transition={{ duration: 0.25 }}
+                            className="hover:cursor-pointer text-white hover:text-sky-400 duration-500"
+                        >
+                            <Link href={"/omegaspaceteam"}>
+                                <span className="bg-ashgrey px-6 py-3 rounded-lg text-2xl lg:text-xl font-semibold">
+                                    Learn more
+                                </span>
+                            </Link>
+                        </motion.div>
+                    </motion.div>
                 </motion.div>
             </section>
             <motion.section
@@ -154,14 +173,14 @@ export default function Page() {
                         by="BlackShade"
                     />
                 </div>
-                <div className="flex justify-center gap-4 h-28 mt-10">
+                <div className="flex justify-center items-center gap-4 h-28 mt-10">
                     <motion.div
                         whileHover={{ scale: 1.025 }}
-                        transition={{ duration: 0.33 }}
+                        transition={{ duration: 0.25 }}
                         className="hover:cursor-pointer text-white hover:text-sky-400 duration-500"
                     >
                         <Link href="/projects">
-                            <span className="bg-ashgrey px-12 py-6 rounded-lg text-3xl font-semibold ">
+                            <span className="bg-ashgrey px-6 py-3 lg:px-12 lg:py-6 rounded-lg text-2xl lg:text-3xl font-semibold ">
                                 View all projects
                             </span>
                         </Link>

@@ -14,7 +14,7 @@ export default function Page() {
                 className="flex flex-col gap-8 mt-10"
                 id="projects"
             >
-                <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left mb-10">
+                <h2 className="text-5xl text-center font-bold text-white lg:text-6xl mb-10">
                     All Projects
                 </h2>
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -63,17 +63,17 @@ export default function Page() {
                         by="BlackShade"
                     />
                 </div>
-                <div className="flex justify-center gap-4 h-28 mt-10">
+                <div className="flex justify-center items-center gap-4 h-28 mt-10">
                     <motion.div
                         initial={{ rotate: 0 }}
                         whileHover={{
-                            rotate: [0, 33, -33, 33, -33, 0],
+                            rotate: [0, 25, -25, 25, -25, 0],
                         }}
                         transition={{ duration: 0.5 }}
-                        className=" text-white duration-500 hover:text-slate-600"
+                        className=" text-white duration-500 hover:text-red-500"
                     >
                         <span className="bg-ashgrey px-12 py-6 rounded-full text-3xl font-semibold ">
-                            More Projects Coming Soon
+                            More Projects Coming Soon...
                         </span>
                     </motion.div>
                 </div>
