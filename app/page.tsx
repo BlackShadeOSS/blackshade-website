@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { AnimatedText } from "./textTyper";
 import Card from "./card";
 import ContactCard from "./contactCard";
+import { KofiButton } from "react-kofi-button";
 
 export default function Page() {
     return (
@@ -162,12 +163,63 @@ export default function Page() {
                 <h2 className="text-5xl font-bold text-black-primary text-left lg:text-6xl dark:text-white-primary mb-10">
                     Wanna to contact me? Here's how!
                 </h2>
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
                     <ContactCard
                         title="Email"
                         link="mailto:diaxsio10@gmail.com"
+                        logo="email"
+                    />
+                    <ContactCard
+                        title="GitHub"
+                        link="https://github.com/BlackShadeOSS"
+                        logo="github"
+                    />
+                    <ContactCard
+                        title="Discord"
+                        link="https://discordapp.com/users/710398177613971499"
+                        logo="discord"
+                    />
+                    <ContactCard
+                        title="LinkedIn"
+                        link="https://www.linkedin.com/in/tomasz-tarnawski-682341290/"
+                        logo="linkedin"
+                    />
+                    <ContactCard
+                        title="X"
+                        link="https://x.com/BlackShadeOSS"
+                        logo="x"
                     />
                 </div>
+            </motion.section>
+            <motion.section
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 2 }}
+                className="flex flex-col gap-8 mt-10"
+                id="supportme"
+            >
+                <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary">
+                    Support me!
+                </h2>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.75, delay: 1 }}
+                    className="text-xl text-black-primary dark:text-white-primary w-2/3"
+                >
+                    If you want to support me and my team, you can do it by
+                    following me on my social media above or by donating me on
+                    Ko-fi. Every donation will be used to fund our current and
+                    future projects.
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.75, delay: 1.25 }}
+                    className="flex gap-4 h-28"
+                >
+                    <KofiButton username="blackshade" label="Buy me a coffee" />
+                </motion.div>
             </motion.section>
         </div>
     );
