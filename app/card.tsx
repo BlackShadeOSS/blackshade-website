@@ -93,7 +93,7 @@ export default function Card({
             whileHover={{ scale: [null, 1.015] }}
             transition={{ duration: 0.4 }}
         >
-            <div className="h-80 w-full bg-ashgrey rounded-lg p-5">
+            <div className="h-auto w-full bg-ashgrey rounded-lg p-5">
                 <div className="flex justify-between">
                     <h3 className="text-left text-3xl px-4">{title}</h3>
                     <Image
@@ -107,8 +107,8 @@ export default function Card({
                 <p className="px-4 pt-5 text-lg text-left line-clamp-3 h-26">
                     {description}
                 </p>
-                <div className="flex">
-                    <p className="px-4 text-xl text-left mt-6 mb-4 py-2 align-middle w-1/2">
+                <div className="flex flex-col 2xl:flex-row">
+                    <p className="px-4 text-xl text-left mt-6 2xl:mb-4 py-2 align-middle w-full 2xl:w-1/2">
                         Status:{" "}
                         <span
                             className="rounded px-2 py-1 text-lg font-semibold ml-2"
@@ -120,7 +120,7 @@ export default function Card({
                             {statusText[status]}
                         </span>
                     </p>
-                    <p className="px-4 text-xl text-right mt-6 mb-4 py-2 align-middle w-1/2">
+                    <p className="px-4 text-xl text-left 2xl:text-right 2xl:mt-6 mb-4 py-2 align-middle w-full 2xl:w-1/2">
                         Repo:{" "}
                         {repo ? (
                             <a

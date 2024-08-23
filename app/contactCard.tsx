@@ -33,7 +33,9 @@ export default function ContactCard({ title, link, logo }: ContactCardProps) {
                             width={40}
                             height={40}
                         />
-                        <h3 className="text-left text-3xl px-4">{title}</h3>
+                        <h3 className="text-left text-2xl 2xl:text-3xl px-4">
+                            {title}
+                        </h3>
                     </div>
                 </div>
             </motion.div>

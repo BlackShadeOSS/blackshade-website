@@ -20,14 +20,14 @@ export default function Page() {
                     transition={{ duration: 0.75 }}
                     className="flex flex-col gap-4"
                 >
-                    <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary">
+                    <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left">
                         <AnimatedText text="Hi, I'm Tomasz" once speed={0.15} />
                     </h2>
                     <motion.p
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.75, delay: 0.25 }}
-                        className="text-xl text-black-primary dark:text-white-primary"
+                        className="text-xl text-white text-center lg:text-left"
                     >
                         I am a beginner software developer from Poland. I mainly
                         focus on web development and game development. Most of
@@ -39,7 +39,7 @@ export default function Page() {
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.75, delay: 0.5 }}
-                        className="text-xl text-black-primary dark:text-white-primary"
+                        className="text-xl text-white text-center lg:text-left"
                     >
                         In the internet I am known as BlackShade or
                         BlackShadeOSS. I'm a leader of OmegaSpace team, about
@@ -54,7 +54,7 @@ export default function Page() {
                     <Image
                         src="/avatar-round.png"
                         alt="My avatar"
-                        className="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit lg:text-right"
+                        className="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit"
                         width={350}
                         height={350}
                     />
@@ -68,11 +68,12 @@ export default function Page() {
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.75, delay: 1 }}
+                    className="order-last lg:order-first"
                 >
                     <Image
                         src="/OSS-logo.png"
                         alt="OSS logo"
-                        className=" mx-auto w-9/12 lg:order-0 lg:ml-0 lg:w-fit lg:text-left"
+                        className="mx-auto w-9/12 lg:ml-0 lg:w-fit"
                         width={350}
                         height={350}
                     />
@@ -83,14 +84,14 @@ export default function Page() {
                     transition={{ duration: 0.75, delay: 1 }}
                     className="flex flex-col gap-4 text-right"
                 >
-                    <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary">
+                    <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-right">
                         OmegaSpace Team
                     </h2>
                     <motion.p
                         initial={{ opacity: 0, x: +100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.75, delay: 1.25 }}
-                        className="text-xl text-black-primary dark:text-white-primary"
+                        className="text-xl text-white text-center lg:text-right"
                     >
                         OmegaSpace Team is a multipart group of people
                         interested in software development and engineering.
@@ -101,11 +102,11 @@ export default function Page() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.75, delay: 1.5 }}
                     >
-                        <p className="text-xl text-black-primary dark:text-white-primary text-left">
+                        <p className="text-xl text-white text-center lg:text-left">
                             We are made up of two departments which are listed
                             below:
                         </p>
-                        <ul className="mb-4 ml-8 list-disc text-xl text-black-primary dark:text-white-primary text-left">
+                        <ul className="mb-4 ml-8 list-disc text-xl text-white text-left">
                             <li>
                                 OmegaSpaceDev is focused on software development
                                 and game development.
@@ -125,7 +126,7 @@ export default function Page() {
                 className="flex flex-col gap-8 mt-10"
                 id="projects"
             >
-                <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary mb-10">
+                <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left mb-10">
                     Projects
                 </h2>
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -160,10 +161,10 @@ export default function Page() {
                 className="flex flex-col gap-8 mt-10"
                 id="contact"
             >
-                <h2 className="text-5xl font-bold text-black-primary text-left lg:text-6xl dark:text-white-primary mb-10">
+                <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left mb-10">
                     Wanna to contact me? Here's how!
                 </h2>
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 xl:grid-cols-5">
                     <ContactCard
                         title="Email"
                         link="mailto:diaxsio10@gmail.com"
@@ -198,14 +199,14 @@ export default function Page() {
                 className="flex flex-col gap-8 mt-10"
                 id="supportme"
             >
-                <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary">
+                <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left">
                     Support me!
                 </h2>
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.75, delay: 1 }}
-                    className="text-xl text-black-primary dark:text-white-primary w-2/3"
+                    className="text-xl text-black-primary dark:text-white-primary lg:w-2/3"
                 >
                     If you want to support me and my team, you can do it by
                     following me on my social media above or by donating me on
@@ -219,7 +220,7 @@ export default function Page() {
                     className="flex gap-4 h-28 mt-4"
                 >
                     <KofiButton
-                        link="https://ko-fi.com/blackshadeoss"
+                        link="https://ko-fi.com/blackshade"
                         message="Support me on Ko-fi"
                     />
                 </motion.div>
