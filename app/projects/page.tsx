@@ -50,7 +50,7 @@ export default function Page() {
                     <Card
                         title="Navix"
                         description="Navix is a modular avionics board for OmegaSpaceSystems. It's designed to be used in various aerospace projects."
-                        languages={["kicad"]}
+                        languages={["kicad", "hardware"]}
                         status="paused"
                         by="OmegaSpaceSystems"
                     />
@@ -61,6 +61,20 @@ export default function Page() {
                         status="completed"
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
+                    />
+                    <Card
+                        title="Liquid Rocket Engine"
+                        description="Liquid Rocket Engine is project that focuses on creating a liquid rocket engine that uses liquid nitrus oxide and ethanol as fuel."
+                        languages={["fusion360", "hardware"]}
+                        status="paused"
+                        by="OmegaSpaceSystems"
+                    />
+                    <Card
+                        title="Sagas of Mankind"
+                        description="Sagas Of Mankind is a fascinating evolutionary-strategic game in which players lead their civilization through centuries of evolution and adapt to the changing environment. "
+                        languages={["cpp", "ue5"]}
+                        status="paused"
+                        by="OmegaSpaceDev"
                     />
                 </div>
                 <div className="flex justify-center items-center gap-4 h-28 mt-10">

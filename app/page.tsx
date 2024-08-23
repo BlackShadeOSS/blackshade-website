@@ -55,7 +55,7 @@ export default function Page() {
                     <Image
                         src="/avatar-round.png"
                         alt="My avatar"
-                        className="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit h-96"
+                        className="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit h-auto lg:h-96"
                         width={350}
                         height={350}
                     />
@@ -74,7 +74,7 @@ export default function Page() {
                     <Image
                         src="/OSS-logo.svg"
                         alt="OSS logo"
-                        className="mx-auto w-9/12 lg:ml-0 lg:w-fit h-96"
+                        className="mx-auto w-9/12 lg:ml-0 lg:w-fit h-auto lg:h-96"
                         width={350}
                         height={350}
                     />

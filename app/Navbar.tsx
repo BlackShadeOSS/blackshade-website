@@ -7,7 +7,7 @@ const NavBar = () => {
         <nav className="bg-coalblack px-2 pt-5 pb-10 rounded ">
             <div className="container flex flex-wrap items-center justify-center lg:justify-between mx-auto">
                 <h1 className="text-3xl">BlackShade</h1>
-                <ul className="flex flex-wrap items-center justify-center lg:justify-around">
+                <ul className="flex flex-wrap items-center justify-center lg:justify-around gap-2 lg:gap-0 mt-4 lg:mt-0">
                     <li>
                         <Link href="/">
                             <span className="px-3 py-2 text-white text-2xl">

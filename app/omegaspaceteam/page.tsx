@@ -47,7 +47,7 @@ export default function Page() {
                     <Image
                         src="/OSS-logo.svg"
                         alt="OSS logo"
-                        className="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit h-96"
+                        className="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit h-auto lg:h-96"
                         width={350}
                         height={350}
                     />
@@ -71,13 +71,13 @@ export default function Page() {
                         className="h-auto w-full bg-ashgrey rounded-lg p-8"
                     >
                         <div className="flex justify-between items-center">
-                            <h3 className="text-left text-5xl px-4 h-12">
+                            <h3 className="text-left text-4xl lg:text-5xl px-4 h-12">
                                 Systems
                             </h3>
                             <Image
                                 src="/OSS-logo.svg"
                                 alt="OSS-Logo"
-                                className="inline w-auto h-24"
+                                className="inline w-auto h-16 lg:h-24"
                                 width={96}
                                 height={96}
                             />
@@ -101,13 +101,13 @@ export default function Page() {
                         className="h-auto w-full bg-ashgrey rounded-lg p-8"
                     >
                         <div className="flex justify-between items-center">
-                            <h3 className="text-left text-5xl px-4 h-12">
+                            <h3 className="text-left text-4xl lg:text-5xl px-4 h-12">
                                 Dev
                             </h3>
                             <Image
                                 src="/OSD-logo.svg"
                                 alt="OSD-Logo"
-                                className="inline w-auto h-24"
+                                className="inline w-auto h-16 lg:h-24"
                                 width={96}
                                 height={96}
                             />
@@ -137,28 +137,14 @@ export default function Page() {
                 </h2>
                 <div className="grid grid-cols-1 gap-8 px-12 lg:grid-cols-2">
                     <div className="h-auto w-full bg-ashgrey rounded-lg p-5">
-                        <div className="flex justify-between items-center">
-                            <h3 className="text-left text-5xl px-4 h-12">
+                        <div className="flex flex-col lg:flex-row justify-between items-center">
+                            <h3 className="text-center lg:text-left text-4xl lg:text-5xl px-4 h-auto lg:h-12">
                                 Tomasz Tarnawski
                             </h3>
                             <Image
                                 src="/avatar-round.png"
                                 alt="BlackShade"
-                                className="inline w-auto h-24"
-                                width={96}
-                                height={96}
-                            />
-                        </div>
-                    </div>
-                    <div className="h-auto w-full bg-ashgrey rounded-lg p-5">
-                        <div className="flex justify-between items-center">
-                            <h3 className="text-left text-5xl px-4 h-12">
-                                Tomasz Tarnawski
-                            </h3>
-                            <Image
-                                src="/avatar-round.png"
-                                alt="BlackShade"
-                                className="inline w-auto h-24"
+                                className="inline w-auto h-24 mt-4 lg:mt-0"
                                 width={96}
                                 height={96}
                             />

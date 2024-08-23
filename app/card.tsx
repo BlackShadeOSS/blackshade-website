@@ -52,6 +52,7 @@ const colors = {
     kicad: "#314cb0",
     html: "#e96228",
     css: "#2862e9",
+    hardware: "#7c8185",
 };
 
 const fullnames = {
@@ -70,6 +71,7 @@ const fullnames = {
     kicad: "KiCad",
     html: "HTML",
     css: "CSS",
+    hardware: "Hardware",
 };
 
 const textColors = {
@@ -88,6 +90,7 @@ const textColors = {
     kicad: "#fff",
     html: "#fff",
     css: "#000",
+    hardware: "#fff",
 };
 
 const byLogo = {
