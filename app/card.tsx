@@ -93,7 +93,7 @@ const textColors = {
 const byLogo = {
     BlackShade: "/avatar-round.png",
     OmegaSpaceDev: "/OSD-logo.svg",
-    OmegaSpaceSystems: "/OSS-logo.png",
+    OmegaSpaceSystems: "/OSS-logo.svg",
 };
 
 export default function Card({
