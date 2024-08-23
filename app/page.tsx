@@ -190,7 +190,7 @@ export default function Page() {
             <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 2 }}
+                transition={{ duration: 1.5 }}
                 className="flex flex-col gap-8 mt-10"
                 id="contact"
             >
@@ -228,7 +228,7 @@ export default function Page() {
             <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 2 }}
+                transition={{ duration: 1.5 }}
                 className="flex flex-col gap-8 mt-10"
                 id="supportme"
             >
