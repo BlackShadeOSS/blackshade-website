@@ -42,8 +42,8 @@ export default function Page() {
                         className="text-xl text-white text-center lg:text-left"
                     >
                         In the internet I am known as BlackShade or
-                        BlackShadeOSS. I'm a leader of OmegaSpace team, about
-                        which you can read below.
+                        BlackShadeOSS. I{`'`}m a leader of OmegaSpace team,
+                        about which you can read below.
                     </motion.p>
                 </motion.div>
                 <motion.div
@@ -152,6 +152,28 @@ export default function Page() {
                         status="inprogress"
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
                     />
+                    <Card
+                        title="BlackMessages"
+                        description="BlackMessages is a location based chat app. Designed for people who want to chat with others in their area."
+                        languages={["dart", "flutter"]}
+                        status="paused"
+                        by="OmegaSpaceDev"
+                    />
+                    <Card
+                        title="Navix"
+                        description="Navix is a modular avionics board for OmegaSpaceSystems. It's designed to be used in various aerospace projects."
+                        languages={["kicad"]}
+                        status="paused"
+                        by="OmegaSpaceSystems"
+                    />
+                    <Card
+                        title="Space Odyssey 2"
+                        description="Space Odyssey 2 is a space race game made using Canvas. It was made as a final project for my first year of high school."
+                        languages={["html", "css", "javascript"]}
+                        status="completed"
+                        repo="github.com/BlackShadeOSS/Space-Odyssey-2"
+                        by="BlackShade"
+                    />
                 </div>
             </motion.section>
             <motion.section
@@ -162,7 +184,7 @@ export default function Page() {
                 id="contact"
             >
                 <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left mb-10">
-                    Wanna to contact me? Here's how!
+                    Wanna to contact me? Here{`'`}s how!
                 </h2>
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 xl:grid-cols-5">
                     <ContactCard
@@ -217,7 +239,7 @@ export default function Page() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.75, delay: 1.25 }}
-                    className="flex gap-4 h-28 mt-4"
+                    className="flex justify-center lg:justify-start gap-4 h-28 mt-4"
                 >
                     <KofiButton
                         link="https://ko-fi.com/blackshade"

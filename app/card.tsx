@@ -2,6 +2,7 @@
 import "./globals.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import css from "styled-jsx/css";
 
 type CardProps = {
     title: string;
@@ -46,6 +47,11 @@ const colors = {
     ue5: "#000",
     unity: "#c3cbd0",
     fusion360: "#f6792e",
+    dart: "#04599c",
+    flutter: "#59c7f8",
+    kicad: "#314cb0",
+    html: "#e96228",
+    css: "#2862e9",
 };
 
 const fullnames = {
@@ -59,6 +65,11 @@ const fullnames = {
     ue5: "Unreal Engine 5",
     unity: "Unity",
     fusion360: "Fusion 360",
+    dart: "Dart",
+    flutter: "Flutter",
+    kicad: "KiCad",
+    html: "HTML",
+    css: "CSS",
 };
 
 const textColors = {
@@ -72,11 +83,16 @@ const textColors = {
     ue5: "#fff",
     unity: "#000",
     fusion360: "#fff",
+    dart: "#fff",
+    flutter: "#000",
+    kicad: "#fff",
+    html: "#fff",
+    css: "#000",
 };
 
 const byLogo = {
     BlackShade: "/avatar-round.png",
-    OmegaSpaceDev: "/OSS-logo.png",
+    OmegaSpaceDev: "/OSD-logo.svg",
     OmegaSpaceSystems: "/OSS-logo.png",
 };
 
@@ -99,7 +115,7 @@ export default function Card({
                     <Image
                         src={byLogo[by]}
                         alt="Logo"
-                        className="rounded-full inline ml-2 mb-1.5 h-10 w-auto"
+                        className="inline ml-2 mb-1.5 h-10 w-auto"
                         width={40}
                         height={40}
                     />
