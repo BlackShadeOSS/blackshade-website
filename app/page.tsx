@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./textTyper";
 import Card from "./card";
+import ContactCard from "./contactCard";
 
 export default function Page() {
     return (
@@ -121,6 +122,7 @@ export default function Page() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 2 }}
                 className="flex flex-col gap-8 mt-10"
+                id="projects"
             >
                 <h2 className="text-5xl font-bold text-black-primary lg:text-6xl dark:text-white-primary mb-10">
                     Projects
@@ -145,8 +147,25 @@ export default function Page() {
                         title="MECB"
                         description="MECB is a Modular Exhaust and CanBox for Voron2.4 printer. It's designed to support multiple toolheads with or without a exhaust filters."
                         languages={["fusion360"]}
-                        status="completed"
+                        status="inprogress"
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
+                    />
+                </div>
+            </motion.section>
+            <motion.section
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 2 }}
+                className="flex flex-col gap-8 mt-10"
+                id="contact"
+            >
+                <h2 className="text-5xl font-bold text-black-primary text-left lg:text-6xl dark:text-white-primary mb-10">
+                    Wanna to contact me? Here's how!
+                </h2>
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <ContactCard
+                        title="Email"
+                        link="mailto:diaxsio10@gmail.com"
                     />
                 </div>
             </motion.section>

@@ -98,7 +98,7 @@ export default function Card({
                     <h3 className="text-left text-3xl px-4">{title}</h3>
                     <Image
                         src={byLogo[by]}
-                        alt="BlackShade logo"
+                        alt="Logo"
                         className="rounded-full inline ml-2 mb-1.5 h-10 w-auto"
                         width={40}
                         height={40}
