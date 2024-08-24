@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Status from "@/app/components/status";
+import Repo from "@/app/components/repo";
 
 export default function Page() {
     return (
@@ -17,6 +19,10 @@ export default function Page() {
                     <h2 className="text-5xl text-center font-bold text-white lg:text-6xl mb-10">
                         Daito Stories
                     </h2>
+                    <div className="flex flex-col 2xl:flex-row justify-between">
+                        <Status status="inprogress" size="lg" />
+                        <Repo repo="" size="lg" />
+                    </div>
                     <p className="text-2xl text-white text-center">
                         Daito Stories is 2.5D dungeon crawler game made in
                         Unreal Engine 5. More information soon.

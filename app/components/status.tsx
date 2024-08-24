@@ -3,6 +3,7 @@ import "../globals.css";
 
 type StatusProps = {
     status: StatusKey;
+    size?: "sm" | "md" | "lg";
 };
 
 export type StatusKey = keyof typeof statusColors;
@@ -25,12 +26,24 @@ const statusTextColors = {
     paused: "#000",
 };
 
-export default function Status({ status }: StatusProps) {
+const statusClassP = {
+    sm: "px-4 text-xl text-left mt-6 2xl:mb-4 py-2 align-middle w-full 2xl:w-1/2",
+    md: "text-xl sm:text-3xl text-left mt-6 2xl:mb-4 py-2 align-middle w-fit",
+    lg: "text-xl sm:text-4xl text-left mt-6 2xl:mb-4 py-2 align-middle w-fit",
+};
+
+const statusClassSpan = {
+    sm: "rounded px-2 py-1 text-lg font-semibold ml-2",
+    md: "rounded px-2 py-1 text-lg sm:text-2xl font-semibold ml-2",
+    lg: "rounded px-2 py-1 text-lg sm:text-3xl font-semibold ml-2",
+};
+
+export default function Status({ status, size = "sm" }: StatusProps) {
     return (
-        <p className="px-4 text-xl text-left mt-6 2xl:mb-4 py-2 align-middle w-full 2xl:w-1/2">
+        <p className={statusClassP[size]}>
             Status:{" "}
             <span
-                className="rounded px-2 py-1 text-lg font-semibold ml-2"
+                className={statusClassSpan[size]}
                 style={{
                     backgroundColor: statusColors[status],
                     color: statusTextColors[status],
