@@ -3,6 +3,7 @@ import "../globals.css";
 
 type LanguagesProps = {
     languages: LanguageKey[];
+    size?: "sm" | "md" | "lg";
 };
 
 export type LanguageKey = keyof typeof colors;
@@ -63,6 +64,8 @@ const textColors = {
     css: "#000",
     hardware: "#fff",
 };
+
+const languageClassDiv = {};
 
 export default function Languages({ languages }: LanguagesProps) {
     return (
