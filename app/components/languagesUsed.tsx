@@ -69,7 +69,7 @@ const languageClassDiv = {};
 
 export default function Languages({ languages }: LanguagesProps) {
     return (
-        <div className="flex gap-2 px-4 py-2 overflow-x-hidden">
+        <div className="flex gap-2 px-4 py-2 overflow-x-hidden h-fit">
             {languages &&
                 languages.map((lang) => (
                     <div
