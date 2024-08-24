@@ -65,11 +65,15 @@ const textColors = {
     hardware: "#fff",
 };
 
-const languageClassDiv = {};
+const languageClassSpan = {
+    sm: "text-base",
+    md: "text-lg sm:text-xl",
+    lg: "text-lg sm:text-2xl",
+};
 
-export default function Languages({ languages }: LanguagesProps) {
+export default function Languages({ languages, size = "sm" }: LanguagesProps) {
     return (
-        <div className="flex gap-2 px-4 py-2 overflow-x-hidden h-fit">
+        <div className="flex flex-col text-center lg:flex-row gap-2 px-4 py-2 overflow-x-hidden h-fit">
             {languages &&
                 languages.map((lang) => (
                     <div
@@ -79,7 +83,7 @@ export default function Languages({ languages }: LanguagesProps) {
                     >
                         <span
                             style={{ color: textColors[lang] }}
-                            className="font-bold"
+                            className={"font-bold " + languageClassSpan[size]}
                         >
                             {fullnames[lang]}
                         </span>

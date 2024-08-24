@@ -156,6 +156,7 @@ export default function Page() {
                         languages={["csharp", "unity"]}
                         status="completed"
                         repo="github.com/BlackShadeOSS/LocalMultiplayerControllerSelectionScript"
+                        link="/projects"
                     />
                     <Card
                         title="MECB"
@@ -163,6 +164,7 @@ export default function Page() {
                         languages={["fusion360"]}
                         status="inprogress"
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
+                        link="/projects"
                     />
                     <Card
                         title="Space Odyssey 2"
@@ -171,6 +173,7 @@ export default function Page() {
                         status="completed"
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
+                        link="/projects"
                     />
                 </div>
                 <div className="flex justify-center items-center gap-4 h-28 mt-10">

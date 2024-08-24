@@ -25,6 +25,7 @@ export default function Page() {
                         languages={["cpp", "ue5"]}
                         status="inprogress"
                         by="OmegaSpaceDev"
+                        link="/projects/daitostories"
                     />
                     <Card
                         title="LMCSS"
@@ -32,6 +33,7 @@ export default function Page() {
                         languages={["csharp", "unity"]}
                         status="completed"
                         repo="github.com/BlackShadeOSS/LocalMultiplayerControllerSelectionScript"
+                        link="/projects"
                     />
                     <Card
                         title="MECB"
@@ -39,6 +41,7 @@ export default function Page() {
                         languages={["fusion360"]}
                         status="inprogress"
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
+                        link="/projects"
                     />
                     <Card
                         title="BlackMessages"
@@ -46,6 +49,7 @@ export default function Page() {
                         languages={["dart", "flutter"]}
                         status="paused"
                         by="OmegaSpaceDev"
+                        link="/projects"
                     />
                     <Card
                         title="Navix"
@@ -53,6 +57,7 @@ export default function Page() {
                         languages={["kicad", "hardware"]}
                         status="paused"
                         by="OmegaSpaceSystems"
+                        link="/projects"
                     />
                     <Card
                         title="Space Odyssey 2"
@@ -61,6 +66,7 @@ export default function Page() {
                         status="completed"
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
+                        link="/projects"
                     />
                     <Card
                         title="Liquid Rocket Engine"
@@ -68,6 +74,7 @@ export default function Page() {
                         languages={["fusion360", "hardware"]}
                         status="paused"
                         by="OmegaSpaceSystems"
+                        link="/projects"
                     />
                     <Card
                         title="Sagas of Mankind"
@@ -75,6 +82,7 @@ export default function Page() {
                         languages={["cpp", "ue5"]}
                         status="paused"
                         by="OmegaSpaceDev"
+                        link="/projects"
                     />
                 </div>
                 <div className="flex justify-center items-center gap-4 h-28 mt-10">
