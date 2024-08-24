@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Card from "../card";
+import Card from "../components/card";
 
 export default function Page() {
     return (

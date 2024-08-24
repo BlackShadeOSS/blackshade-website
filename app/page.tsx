@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { AnimatedText } from "./textTyper";
-import Card from "./card";
-import ContactCard from "./contactCard";
-import KofiButton from "./kofiButton";
+import { AnimatedText } from "./components/textTyper";
+import Card from "./components/card";
+import ContactCard from "./components/contactCard";
+import KofiButton from "./components/kofiButton";
 
 export default function Page() {
     return (

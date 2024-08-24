@@ -1,10 +1,11 @@
 "use client";
-import "./globals.css";
+import "../globals.css";
 
 type LanguagesProps = {
     languages: LanguageKey[];
 };
-type LanguageKey = keyof typeof colors;
+
+export type LanguageKey = keyof typeof colors;
 
 const colors = {
     javascript: "#efd81d",

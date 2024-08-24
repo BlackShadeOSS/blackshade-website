@@ -1,5 +1,5 @@
 "use client";
-import "./globals.css";
+import "../globals.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { init } from "next/dist/compiled/webpack/webpack";
