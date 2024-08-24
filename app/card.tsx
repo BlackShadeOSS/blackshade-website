@@ -2,17 +2,16 @@
 import "./globals.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import css from "styled-jsx/css";
+import Languages from "./languagesUsed";
 
 type CardProps = {
     title: string;
     description: string;
-    languages: LanguageKey[];
+    languages: string[];
     status: StatusKey;
     repo?: string;
     by?: ByKey;
 };
-type LanguageKey = keyof typeof colors;
 
 type StatusKey = keyof typeof statusColors;
 
@@ -36,63 +35,6 @@ const statusTextColors = {
     paused: "#000",
 };
 
-const colors = {
-    javascript: "#efd81d",
-    typescript: "#2f74c0",
-    rust: "#f75108",
-    csharp: "#512bd4",
-    python: "#3572a5",
-    java: "#e25040",
-    cpp: "#005697",
-    ue5: "#000",
-    unity: "#c3cbd0",
-    fusion360: "#f6792e",
-    dart: "#04599c",
-    flutter: "#59c7f8",
-    kicad: "#314cb0",
-    html: "#e96228",
-    css: "#2862e9",
-    hardware: "#7c8185",
-};
-
-const fullnames = {
-    javascript: "JavaScript",
-    typescript: "TypeScript",
-    rust: "Rust",
-    csharp: "C#",
-    python: "Python",
-    java: "Java",
-    cpp: "C++",
-    ue5: "Unreal Engine 5",
-    unity: "Unity",
-    fusion360: "Fusion 360",
-    dart: "Dart",
-    flutter: "Flutter",
-    kicad: "KiCad",
-    html: "HTML",
-    css: "CSS",
-    hardware: "Hardware",
-};
-
-const textColors = {
-    javascript: "#000",
-    typescript: "#000",
-    rust: "#fff",
-    csharp: "#fff",
-    python: "#fff",
-    java: "#fff",
-    cpp: "#fff",
-    ue5: "#fff",
-    unity: "#000",
-    fusion360: "#fff",
-    dart: "#fff",
-    flutter: "#000",
-    kicad: "#fff",
-    html: "#fff",
-    css: "#000",
-    hardware: "#fff",
-};
-
 const byLogo = {
     BlackShade: "/avatar-round.png",
     OmegaSpaceDev: "/OSD-logo.svg",
@@ -113,8 +55,10 @@ export default function Card({
             transition={{ duration: 0.4 }}
         >
             <div className="h-auto w-full bg-ashgrey rounded-lg p-5">
-                <div className="flex justify-between">
-                    <h3 className="text-left text-3xl px-4">{title}</h3>
+                <div className="flex justify-between items-center">
+                    <h3 className="text-left text-2xl lg:text-3xl px-4 h-fit">
+                        {title}
+                    </h3>
                     <Image
                         src={byLogo[by]}
                         alt="Logo"
@@ -170,23 +114,7 @@ export default function Card({
                             </span>
                         )}
                     </p>
-                </div>
-                <div className="flex gap-2 px-4 py-2 overflow-x-hidden">
-                    {languages &&
-                        languages.map((lang) => (
-                            <div
-                                key={lang}
-                                className="rounded px-2 py-1"
-                                style={{ backgroundColor: colors[lang] }}
-                            >
-                                <span
-                                    style={{ color: textColors[lang] }}
-                                    className="font-bold"
-                                >
-                                    {fullnames[lang]}
-                                </span>
-                            </div>
-                        ))}
+                    <Languages languages={languages} />
                 </div>
             </div>
         </motion.div>

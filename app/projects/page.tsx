@@ -86,7 +86,7 @@ export default function Page() {
                         transition={{ duration: 0.5 }}
                         className=" text-white duration-500 hover:text-red-500"
                     >
-                        <span className="bg-ashgrey px-12 py-6 rounded-full text-3xl font-semibold ">
+                        <span className="bg-ashgrey px-5 py-3 lg:px-12 lg:py-6 rounded-full text-xl lg:text-3xl font-semibold ">
                             More Projects Coming Soon...
                         </span>
                     </motion.div>
