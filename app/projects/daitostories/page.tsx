@@ -7,7 +7,20 @@ import Repo from "@/app/components/repo";
 import Languages from "@/app/components/languagesUsed";
 import { AnimatedText } from "@/app/components/textTyper";
 import RunBy from "@/app/components/runBy";
-import PhotosGalery from "@/app/components/photosGaleryFrontEnd";
+import PhotosGalery from "@/app/components/photosGalery";
+
+const photos = [
+    {
+        name: "daitostories1",
+        extention: ".png",
+        folder: "daitostories",
+    },
+    {
+        name: "daitostories2",
+        extention: ".png",
+        folder: "daitostories",
+    },
+];
 
 export default function Page() {
     return (
@@ -71,7 +84,11 @@ export default function Page() {
                         <span>Contact me</span>
                     </Link>
                 </motion.div>
-                <PhotosGalery folder="daitostories" collumns={3} />
+                <PhotosGalery
+                    folder="daitostories"
+                    collumns={3}
+                    photos={photos}
+                />
             </section>
         </div>
     );
