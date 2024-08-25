@@ -1,6 +1,7 @@
 import Image from "next/image";
 import path from "path";
-import { GetStaticProps } from "next";
+import fs from "fs";
+import { GetStaticProps, GetStaticPaths } from "next";
 
 type PhotosGaleryBackProps = {
     folder: string;
@@ -14,23 +15,25 @@ type Photo = {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const photosPath = path.join(process.cwd(), "public/photos");
     const folder = params?.folder as string;
+    const photosPath = path.join(process.cwd(), "public/photos", folder);
 
-    const photos: Photo[] = [];
+    let photos: Photo[] = [];
 
-    const photosInFolder = await import(`../../public/photos/${folder}`);
+    if (fs.existsSync(photosPath)) {
+        const photosInFolder = fs.readdirSync(photosPath);
 
-    photosInFolder.forEach((photo: string) => {
-        const extention = path.extname(photo);
-        const name = path.basename(photo, extention);
+        photos = photosInFolder.map((photo) => {
+            const extention = path.extname(photo);
+            const name = path.basename(photo, extention);
 
-        photos.push({
-            name,
-            folder,
-            extention,
+            return {
+                name,
+                folder,
+                extention,
+            };
         });
-    });
+    }
 
     return {
         props: {
@@ -40,19 +43,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const photosPath = path.join(process.cwd(), "public/photos");
-    const folders = ["daitostories"];
 
-    const paths = folders.map((folder: string) => ({
+    const folders = fs.readdirSync(photosPath);
+
+    const paths = folders.map((folder) => ({
         params: { folder },
     }));
 
     return {
         paths,
-        fallback: false,
+        fallback: false, // Set to `true` or `blocking` if you expect new folders to be added
     };
-}
+};
 
 export default function PhotosGaleryBackEnd({
     folder,
@@ -60,19 +64,17 @@ export default function PhotosGaleryBackEnd({
 }: PhotosGaleryBackProps) {
     return (
         <>
-            {photos
-                .filter((photo) => photo.folder === folder)
-                .map((photo) => (
-                    <div key={photo.name} className="bg-ashgrey rounded-2xl">
-                        <Image
-                            src={`/photos/${folder}/${photo.name}${photo.extention}`}
-                            alt={photo.name}
-                            width={350}
-                            height={350}
-                            className="rounded-2xl w-full h-auto"
-                        />
-                    </div>
-                ))}
+            {photos.map((photo) => (
+                <div key={photo.name} className="bg-ashgrey rounded-2xl">
+                    <Image
+                        src={`/photos/${folder}/${photo.name}${photo.extention}`}
+                        alt={photo.name}
+                        width={350}
+                        height={350}
+                        className="rounded-2xl w-full h-auto"
+                    />
+                </div>
+            ))}
         </>
     );
 }

@@ -1,6 +1,7 @@
 "use client";
 import "../globals.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import PhotosGaleryBackEnd from "./photosGaleryBackEnd";
 
 type PhotosGaleryProps = {
@@ -23,7 +24,7 @@ export default function PhotosGalery({
                 Photos
             </h3>
             <div className={"grid grid-cols-1 gap-8 lg:grid-cols-" + collumns}>
-                <PhotosGaleryBackEnd folder={folder} />
+
             </div>
         </motion.div>
     );
