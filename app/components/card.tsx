@@ -41,30 +41,39 @@ export default function Card({
             whileHover={{ scale: [null, 1.015] }}
             transition={{ duration: 0.4 }}
         >
-            <Link href={link}>
-                <div className="h-auto w-full bg-ashgrey rounded-lg p-5">
-                    <div className="flex justify-between items-center">
-                        <h3 className="text-left text-2xl lg:text-3xl px-4 h-fit">
-                            {title}
-                        </h3>
-                        <Image
-                            src={byLogo[by]}
-                            alt="Logo"
-                            className="inline ml-2 mb-1.5 h-10 w-auto"
-                            width={40}
-                            height={40}
-                        />
-                    </div>
-                    <p className="px-4 pt-5 text-lg text-left line-clamp-3 h-26">
-                        {description}
-                    </p>
-                    <div className="flex flex-col 2xl:flex-row">
-                        <Status status={status} />
-                        <Repo repo={repo} />
-                    </div>
-                    <Languages languages={languages} />
+            <div className="h-auto w-full bg-ashgrey rounded-lg p-5">
+                <div className="flex justify-between items-center">
+                    <h3 className="text-left text-2xl lg:text-3xl px-4 h-fit">
+                        {title}
+                    </h3>
+                    <Image
+                        src={byLogo[by]}
+                        alt="Logo"
+                        className="inline ml-2 mb-1.5 h-10 w-auto"
+                        width={40}
+                        height={40}
+                    />
                 </div>
-            </Link>
+                <p className="px-4 pt-5 text-lg text-left line-clamp-3 h-26">
+                    {description}
+                </p>
+                <div className="flex flex-col 2xl:flex-row">
+                    <Status status={status} />
+                    <Repo repo={repo} />
+                </div>
+                <Languages languages={languages} />
+                <motion.div
+                    whileHover={{ scale: 1.025 }}
+                    transition={{ duration: 0.25 }}
+                    className="flex justify-center hover:cursor-pointer text-white hover:text-sky-400 duration-500 h-fit mt-8 w-full"
+                >
+                    <Link href={link} className="w-full">
+                        <span className="bg-deepnavyblue px-6 py-3 rounded-lg text-center text-lg lg:text-xl font-semibold w-full block">
+                            Learn More
+                        </span>
+                    </Link>
+                </motion.div>
+            </div>
         </motion.div>
     );
 }

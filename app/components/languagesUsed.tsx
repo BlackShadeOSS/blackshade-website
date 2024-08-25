@@ -73,7 +73,7 @@ const languageClassSpan = {
 
 export default function Languages({ languages, size = "sm" }: LanguagesProps) {
     return (
-        <div className="flex flex-col text-center lg:flex-row gap-2 px-4 py-2 overflow-x-hidden h-fit">
+        <div className="flex flex-col text-center lg:flex-row gap-2 px-4 py-2 overflow-x-hidden h-fit ">
             {languages &&
                 languages.map((lang) => (
                     <div
