@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
     return (
@@ -157,12 +158,12 @@ export default function Page() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1.5, delay: 0.75 }}
                     >
-                        <a
+                        <Link
                             href="/#contact"
                             className="flex items-center justify-center bg-ashgrey hover:bg-[#05226f] h-24 rounded-full px-12 py-6 text-white text-2xl lg:text-3xl duration-700"
                         >
                             <span>Join Us</span>
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.section>

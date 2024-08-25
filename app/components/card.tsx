@@ -65,7 +65,7 @@ export default function Card({
                 <motion.div
                     whileHover={{ scale: 1.025 }}
                     transition={{ duration: 0.25 }}
-                    className="flex justify-center hover:cursor-pointer text-white hover:text-sky-400 duration-500 h-fit mt-8 w-full"
+                    className="flex justify-center hover:cursor-pointer text-white hover:text-sky-400 duration-500 h-fit mt-6 w-full px-4 py-2"
                 >
                     <Link href={link} className="w-full">
                         <span className="bg-deepnavyblue px-6 py-3 rounded-lg text-center text-lg lg:text-xl font-semibold w-full block">

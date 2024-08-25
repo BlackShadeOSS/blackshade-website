@@ -6,6 +6,7 @@ import Status from "@/app/components/status";
 import Repo from "@/app/components/repo";
 import Languages from "@/app/components/languagesUsed";
 import { AnimatedText } from "@/app/components/textTyper";
+import RunBy from "@/app/components/runBy";
 
 export default function Page() {
     return (
@@ -37,6 +38,7 @@ export default function Page() {
                         </h3>
                         <Languages languages={["cpp", "ue5"]} size="lg" />
                     </div>
+                    <RunBy by="OmegaSpaceDev" size="md" />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
@@ -52,17 +54,22 @@ export default function Page() {
                         Unreal Engine 5. More information soon.
                     </p>
                 </motion.div>
-                {/* <motion.div
+                <motion.div
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.75, delay: 1.25 }}
-                    className="bg-ashgrey rounded-2xl p-10 h-fit"
+                    className="bg-ashgrey rounded-2xl p-10 h-fit flex flex-col items-center justify-center"
                 >
                     <h3 className="text-3xl text-center font-bold text-white lg:text-4xl">
-                        Photos
+                        Wanna talk about this project?
                     </h3>
-                    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3"></div>
-                </motion.div> */}
+                    <Link
+                        href="/#contact"
+                        className="flex items-center justify-center bg-deepnavyblue hover:bg-[#05226f] h-24 rounded-full px-6 py-3 text-white text-2xl lg:text-3xl duration-700 mt-8 w-1/2"
+                    >
+                        <span>Contact me</span>
+                    </Link>
+                </motion.div>
             </section>
         </div>
     );
