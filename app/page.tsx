@@ -164,7 +164,7 @@ export default function Page() {
                         languages={["fusion360"]}
                         status="inprogress"
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
-                        link=""
+                        link="/projects/mecb"
                     />
                     <Card
                         title="Space Odyssey 2"

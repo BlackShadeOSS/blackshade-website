@@ -9,18 +9,21 @@ type StatusProps = {
 export type StatusKey = keyof typeof statusColors;
 
 const statusColors = {
+    planned: "#0a4dff",
     completed: "#00ff00",
     inprogress: "#fbe83a",
     paused: "#ff5f0e",
 };
 
 const statusText = {
+    planned: "Planned",
     completed: "Completed",
     inprogress: "In Progress",
     paused: "Paused",
 };
 
 const statusTextColors = {
+    planned: "#000",
     completed: "#000",
     inprogress: "#000",
     paused: "#000",

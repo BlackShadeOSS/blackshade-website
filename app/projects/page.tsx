@@ -38,10 +38,10 @@ export default function Page() {
                     <Card
                         title="MECB"
                         description="MECB is a Modular Exhaust and CanBox for Voron2.4 printer. It's designed to support multiple toolheads with or without a exhaust filters."
-                        languages={["fusion360"]}
+                        languages={["fusion360", "hardware"]}
                         status="inprogress"
                         repo="/github.com/BlackShadeOSS/Modular-Exhaust-CanBox"
-                        link=""
+                        link="/projects/mecb"
                     />
                     <Card
                         title="BlackMessages"
@@ -49,7 +49,7 @@ export default function Page() {
                         languages={["dart", "flutter"]}
                         status="paused"
                         by="OmegaSpaceDev"
-                        link=""
+                        link="/projects/blackmessages"
                     />
                     <Card
                         title="Navix"

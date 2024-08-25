@@ -49,8 +49,8 @@ export default function PhotosGalery({
                               <Image
                                   src={`/photos/${folder}/${photo.name}${photo.extention}`}
                                   alt={photo.name}
-                                  width={350}
-                                  height={350}
+                                  width={700}
+                                  height={700}
                                   className="rounded-2xl w-full h-auto"
                               />
                           </div>
