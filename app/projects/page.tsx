@@ -66,7 +66,7 @@ export default function Page() {
                         status="completed"
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
-                        link=""
+                        link="/projects/spaceodyssey2"
                     />
                     <Card
                         title="Liquid Rocket Engine"

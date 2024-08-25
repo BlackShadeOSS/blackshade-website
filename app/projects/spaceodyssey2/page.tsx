@@ -12,8 +12,13 @@ import { Photo } from "@/app/components/photosGalery";
 
 const photos: Photo[] = [
     {
-        name: "lmcss-1",
-        folder: "lmcss",
+        name: "so2-1",
+        folder: "spaceodyssey2",
+        extention: ".png",
+    },
+    {
+        name: "so2-2",
+        folder: "spaceodyssey2",
         extention: ".png",
     },
 ];
@@ -23,7 +28,11 @@ export default function Page() {
         <div className="flex w-full flex-col gap-12 pb-8">
             <section className="flex flex-col gap-8 mt-10" id="project">
                 <span className="text-5xl text-center font-bold text-white lg:text-6xl mb-10">
-                    <AnimatedText text="Project: LMCSS" once speed={0.125} />
+                    <AnimatedText
+                        text="Project: Space Odyssey 2"
+                        once
+                        speed={0.125}
+                    />
                 </span>
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
@@ -37,7 +46,7 @@ export default function Page() {
                     <div className="flex flex-col lg:flex-row justify-around items-center">
                         <Status status="completed" size="lg" />
                         <Repo
-                            repo="github.com/BlackShadeOSS/LocalMultiplayerControllerSelectionScript"
+                            repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                             size="lg"
                         />
                     </div>
@@ -45,7 +54,10 @@ export default function Page() {
                         <h3 className="text-2xl text-white text-center lg:text-left lg:text-4xl">
                             Languages/Programs used:
                         </h3>
-                        <Languages languages={["csharp", "unity"]} size="lg" />
+                        <Languages
+                            languages={["html", "css", "javascript"]}
+                            size="lg"
+                        />
                     </div>
                     <RunBy by="BlackShade" size="md" />
                 </motion.div>
@@ -59,12 +71,13 @@ export default function Page() {
                         About the project
                     </h3>
                     <p className="text-2xl lg:text-3xl text-white text-center mt-6">
-                        LMCSS is a unity script that dynamicly updates a list of
-                        toggles so user can select a input device. It also makes
-                        sure that only one player at the time uses a specific
-                        device. I tried to write this thing as best as I could
-                        but C# is not a language that I am used to. This project
-                        was made for Unity 2022.3.13f
+                        Space Odyssey 2 is a space race game made using Canvas.
+                        It was made as a final project for my first year of high
+                        school.It is a sequel to the game Space Odyssey. The
+                        game is a 2D space race game with a retro style. The
+                        game is about a space traveller who travels through
+                        space and fights with ufo. The game has a global
+                        leaderboard (Servers are off).
                     </p>
                 </motion.div>
                 <motion.div
@@ -83,7 +96,11 @@ export default function Page() {
                         <span>Contact me</span>
                     </Link>
                 </motion.div>
-                <PhotosGalery folder="lmcss" collumns={2} photos={photos} />
+                <PhotosGalery
+                    folder="spaceodyssey2"
+                    collumns={2}
+                    photos={photos}
+                />
             </section>
         </div>
     );

@@ -173,7 +173,7 @@ export default function Page() {
                         status="completed"
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
-                        link=""
+                        link="/projects/spaceodyssey2"
                     />
                 </div>
                 <div className="flex justify-center items-center gap-4 h-28 mt-10">
