@@ -5,9 +5,13 @@ import PhotosGaleryBackEnd from "./photosGaleryBackEnd";
 
 type PhotosGaleryProps = {
     folder: string;
+    collumns?: 1 | 2 | 3 | 5;
 };
 
-export default function PhotosGalery({ folder }: PhotosGaleryProps) {
+export default function PhotosGalery({
+    folder,
+    collumns = 3,
+}: PhotosGaleryProps) {
     return (
         <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -18,7 +22,7 @@ export default function PhotosGalery({ folder }: PhotosGaleryProps) {
             <h3 className="text-3xl text-center font-bold text-white lg:text-4xl">
                 Photos
             </h3>
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className={"grid grid-cols-1 gap-8 lg:grid-cols-" + collumns}>
                 <PhotosGaleryBackEnd folder={folder} />
             </div>
         </motion.div>

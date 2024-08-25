@@ -35,9 +35,22 @@ photosFolders.forEach((folder) => {
     });
 });
 
-
 export default function PhotosGaleryBackEnd({ folder }: PhotosGaleryBackProps) {
     return (
-        
+        <>
+            {photos
+                .filter((photo) => photo.folder === folder)
+                .map((photo) => (
+                    <div key={photo.name} className="bg-ashgrey rounded-2xl">
+                        <Image
+                            src={`/photos/${folder}/${photo.name}${photo.extention}`}
+                            alt={photo.name}
+                            width={350}
+                            height={350}
+                            className="rounded-2xl w-full h-auto"
+                        />
+                    </div>
+                ))}
+        </>
     );
 }
