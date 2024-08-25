@@ -65,13 +65,24 @@ export default function Card({
                 <motion.div
                     whileHover={{ scale: 1.025 }}
                     transition={{ duration: 0.25 }}
-                    className="flex justify-center hover:cursor-pointer text-white hover:text-sky-400 duration-500 h-fit mt-6 w-full px-4 py-2"
+                    className={
+                        "flex justify-center hover:cursor-pointer text-white h-fit mt-6 w-full px-4 py-2 duration-500 " +
+                        (link !== ""
+                            ? "hover:text-sky-400"
+                            : "hover:text-red-600")
+                    }
                 >
-                    <Link href={link} className="w-full">
+                    {link !== "" ? (
+                        <Link href={link} className="w-full">
+                            <span className="bg-deepnavyblue px-6 py-3 rounded-lg text-center text-lg lg:text-xl font-semibold w-full block">
+                                Learn More
+                            </span>
+                        </Link>
+                    ) : (
                         <span className="bg-deepnavyblue px-6 py-3 rounded-lg text-center text-lg lg:text-xl font-semibold w-full block">
-                            Learn More
+                            Details Coming Soon
                         </span>
-                    </Link>
+                    )}
                 </motion.div>
             </div>
         </motion.div>

@@ -8,19 +8,9 @@ import Languages from "@/app/components/languagesUsed";
 import { AnimatedText } from "@/app/components/textTyper";
 import RunBy from "@/app/components/runBy";
 import PhotosGalery from "@/app/components/photosGalery";
+import { Photo } from "@/app/components/photosGalery";
 
-const photos = [
-    {
-        name: "daitostories1",
-        extention: ".png",
-        folder: "daitostories",
-    },
-    {
-        name: "daitostories2",
-        extention: ".png",
-        folder: "daitostories",
-    },
-];
+const photos: Photo[] = [];
 
 export default function Page() {
     return (
@@ -63,7 +53,7 @@ export default function Page() {
                     <h3 className="text-3xl text-center font-bold text-white lg:text-4xl">
                         About the project
                     </h3>
-                    <p className="text-2xl text-white text-center mt-6">
+                    <p className="text-2xl lg:text-3xl text-white text-center mt-6">
                         Daito Stories is 2.5D dungeon crawler game made in
                         Unreal Engine 5. More information soon.
                     </p>

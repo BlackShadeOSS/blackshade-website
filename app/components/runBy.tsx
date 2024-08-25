@@ -26,7 +26,7 @@ export default function runBy({ by, size = "sm" }: RunByProps) {
                 alt={by}
                 width={size === "sm" ? 50 : size === "md" ? 100 : 150}
                 height={size === "sm" ? 50 : size === "md" ? 100 : 150}
-                className="inline-block"
+                className="inline-block mr-4"
             />
             <span className="text-2xl text-white text-center lg:text-left lg:text-4xl">
                 {by}
