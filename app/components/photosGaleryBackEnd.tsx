@@ -1,11 +1,10 @@
-import "../globals.css";
 import Image from "next/image";
-
-import fs from "fs";
 import path from "path";
+import { GetStaticProps } from "next";
 
 type PhotosGaleryBackProps = {
     folder: string;
+    photos: Photo[];
 };
 
 type Photo = {
@@ -14,16 +13,15 @@ type Photo = {
     extention: string;
 };
 
-const photos: Photo[] = [];
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+    const photosPath = path.join(process.cwd(), "public/photos");
+    const folder = params?.folder as string;
 
-const photosPath = path.join(process.cwd(), "public/photos");
+    const photos: Photo[] = [];
 
-const photosFolders = fs.readdirSync(photosPath);
+    const photosInFolder = await import(`../../public/photos/${folder}`);
 
-photosFolders.forEach((folder) => {
-    const photosInFolder = fs.readdirSync(path.join(photosPath, folder));
-
-    photosInFolder.forEach((photo) => {
+    photosInFolder.forEach((photo: string) => {
         const extention = path.extname(photo);
         const name = path.basename(photo, extention);
 
@@ -33,9 +31,33 @@ photosFolders.forEach((folder) => {
             extention,
         });
     });
-});
 
-export default function PhotosGaleryBackEnd({ folder }: PhotosGaleryBackProps) {
+    return {
+        props: {
+            folder,
+            photos,
+        },
+    };
+};
+
+export async function getStaticPaths() {
+    const photosPath = path.join(process.cwd(), "public/photos");
+    const folders = ["daitostories"];
+
+    const paths = folders.map((folder: string) => ({
+        params: { folder },
+    }));
+
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export default function PhotosGaleryBackEnd({
+    folder,
+    photos,
+}: PhotosGaleryBackProps) {
     return (
         <>
             {photos
