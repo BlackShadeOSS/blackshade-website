@@ -25,6 +25,7 @@ const colors = {
     html: "#e96228",
     css: "#2862e9",
     hardware: "#7c8185",
+    rpa: "#ea5556",
 };
 
 const fullnames = {
@@ -44,6 +45,7 @@ const fullnames = {
     html: "HTML",
     css: "CSS",
     hardware: "Hardware",
+    rpa: "RPA",
 };
 
 const textColors = {
@@ -63,6 +65,7 @@ const textColors = {
     html: "#fff",
     css: "#000",
     hardware: "#fff",
+    rpa: "#fff",
 };
 
 const languageClassSpan = {

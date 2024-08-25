@@ -57,7 +57,7 @@ export default function Page() {
                         languages={["kicad", "hardware"]}
                         status="paused"
                         by="OmegaSpaceSystems"
-                        link=""
+                        link="/projects/navix"
                     />
                     <Card
                         title="Space Odyssey 2"
@@ -71,10 +71,10 @@ export default function Page() {
                     <Card
                         title="Liquid Rocket Engine"
                         description="Liquid Rocket Engine is project that focuses on creating a liquid rocket engine that uses liquid nitrus oxide and ethanol as fuel."
-                        languages={["fusion360", "hardware"]}
+                        languages={["fusion360", "rpa", "hardware"]}
                         status="paused"
                         by="OmegaSpaceSystems"
-                        link=""
+                        link="/projects/liquid-rocket-engine"
                     />
                     <Card
                         title="Sagas of Mankind"
