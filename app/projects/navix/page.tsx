@@ -60,12 +60,12 @@ export default function Page() {
                     </h3>
                     <p className="text-2xl lg:text-3xl text-white text-center mt-6">
                         Navix is a modular avionics board for OmegaSpaceSystems.
-                        It's designed to be used in various aerospace projects.
-                        Project version 2 is currently in design phase. The
-                        board is based around RP 2040 microcontroller and has
-                        various sensors and communication modules. Board is
-                        designed with minimal size and weight in mind. Below are
-                        photos of version 1 of the board.
+                        It{"'"}s designed to be used in various aerospace
+                        projects. Project version 2 is currently in design
+                        phase. The board is based around RP 2040 microcontroller
+                        and has various sensors and communication modules. Board
+                        is designed with minimal size and weight in mind. Below
+                        are photos of version 1 of the board.
                     </p>
                 </motion.div>
                 <motion.div

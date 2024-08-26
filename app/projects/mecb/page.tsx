@@ -68,7 +68,7 @@ export default function Page() {
                     </h3>
                     <p className="text-2xl lg:text-3xl text-white text-center mt-6">
                         MECB is a Modular Exhaust and CanBox for Voron2.4
-                        printer. It's designed to support multiple toolheads
+                        printer. It{"'"}s designed to support multiple toolheads
                         with or without a exhaust filters. It supports multiple
                         canbus extensions types like wagos or BTT CEB board.
                         Filters have 2 options, 1 is a hepa and carbon filter

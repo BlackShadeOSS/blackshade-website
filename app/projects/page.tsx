@@ -78,11 +78,11 @@ export default function Page() {
                     />
                     <Card
                         title="Sagas of Mankind"
-                        description="Sagas Of Mankind is a fascinating evolutionary-strategic game in which players lead their civilization through centuries of evolution and adapt to the changing environment. "
+                        description="Sagas Of Mankind is a fascinating evolutionary-strategic game in which players lead their civilization through centuries of evolution and adapt to the changing environment."
                         languages={["cpp", "ue5"]}
                         status="paused"
                         by="OmegaSpaceDev"
-                        link=""
+                        link="/projects/sagas-of-mankind"
                     />
                 </div>
                 <div className="flex justify-center items-center gap-4 h-28 mt-10">

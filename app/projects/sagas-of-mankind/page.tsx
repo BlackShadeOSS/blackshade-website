@@ -18,7 +18,7 @@ export default function Page() {
             <section className="flex flex-col gap-8 mt-10" id="project">
                 <span className="text-5xl text-center font-bold text-white lg:text-6xl mb-10">
                     <AnimatedText
-                        text="Project: BlackMessages"
+                        text="Project: Sagas of Mankind"
                         once
                         speed={0.125}
                     />
@@ -40,7 +40,7 @@ export default function Page() {
                         <h3 className="text-2xl text-white text-center lg:text-left lg:text-4xl">
                             Languages/Programs used:
                         </h3>
-                        <Languages languages={["dart", "flutter"]} size="lg" />
+                        <Languages languages={["cpp", "ue5"]} size="lg" />
                     </div>
                     <RunBy by="OmegaSpaceDev" size="md" />
                 </motion.div>
@@ -54,17 +54,23 @@ export default function Page() {
                         About the project
                     </h3>
                     <p className="text-2xl lg:text-3xl text-white text-center mt-6">
-                        BlackMessages is a location based chat app designed with
-                        anonymity and security in mind. Designed for people who
-                        want to chat with others in their area. It also has a
-                        private chat feature secured with end-to-end encryption.
-                        People can also create chat rooms and invite others to
-                        join them. There is no user registration required, just
-                        open the app and start chatting. App has no nicknames.
-                        All messages are deleted after 120s after they are sent.
-                        No message history is stored on the server. I{"'"}m
-                        currently searching for more people to join this
-                        project.
+                        Sagas Of Mankind is a fascinating evolution-strategy
+                        game in which players lead their civilization through
+                        centuries of evolution and adapt to a changing
+                        environment. When starting the game, players begin their
+                        adventure as a primitive community that must survive in
+                        a wild world. The game offers many different strategies
+                        that players can use to achieve success - from trade and
+                        diplomacy to territorial expansion and war. However,
+                        what makes this game stand out is its advanced and
+                        unique time managment system. Players will have to adapt
+                        their civilization to the changing environment, as well
+                        as to competitors. The game offers an engaging
+                        single-player campaign, as well as a multiplayer mode,
+                        where players can compete with other players from around
+                        the world. All this is set in beautiful, dynamic
+                        graphics that attract attention and provide a great
+                        visual experience.
                     </p>
                 </motion.div>
                 <motion.div
@@ -84,8 +90,8 @@ export default function Page() {
                     </Link>
                 </motion.div>
                 <PhotosGalery
-                    folder="blackmessages"
-                    collumns={2}
+                    folder="sagas-of-mankind"
+                    collumns={3}
                     photos={photos}
                 />
             </section>
