@@ -8,7 +8,7 @@ type RepoProps = {
 };
 
 const repoClassP = {
-    sm: "px-4 text-xl text-left 2xl:text-right 2xl:mt-6 mb-6 2xl:mb-4 py-2 align-middle w-full 2xl:w-1/2",
+    sm: "text-xl text-left 2xl:text-right 2xl:mt-6 mb-6 2xl:mb-4 py-2 align-middle w-fit",
     md: "text-xl sm:text-3xl text-left lg:mt-6 mb-4 lg:mb-4 py-2 align-middle w-fit",
     lg: "text-xl sm:text-4xl text-left lg:mt-6 mb-4 lg:mb-4 py-2 align-middle w-fit",
 };

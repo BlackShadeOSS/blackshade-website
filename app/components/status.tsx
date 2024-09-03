@@ -30,7 +30,7 @@ const statusTextColors = {
 };
 
 const statusClassP = {
-    sm: "px-4 text-xl text-left mt-6 2xl:mb-4 py-2 align-middle w-full 2xl:w-1/2",
+    sm: "text-xl text-left mt-6 2xl:mb-4 py-2 align-middle w-fit",
     md: "text-xl sm:text-3xl text-left mt-6 2xl:mb-4 py-2 align-middle w-fit",
     lg: "text-xl sm:text-4xl text-left mt-6 2xl:mb-4 py-2 align-middle w-fit",
 };

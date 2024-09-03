@@ -57,7 +57,7 @@ export default function Card({
                 <p className="px-4 pt-5 text-lg text-left line-clamp-3 h-26">
                     {description}
                 </p>
-                <div className="flex flex-col 2xl:flex-row">
+                <div className="flex flex-col 2xl:flex-row justify-around items-center">
                     <Status status={status} />
                     <Repo repo={repo} />
                 </div>
