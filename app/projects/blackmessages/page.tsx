@@ -10,7 +10,13 @@ import RunBy from "@/app/components/runBy";
 import PhotosGalery from "@/app/components/photosGalery";
 import { Photo } from "@/app/components/photosGalery";
 
-const photos: Photo[] = [];
+const photos: Photo[] = [
+    {
+        name: "blackmessageslogo",
+        folder: "blackmessages",
+        extention: ".png",
+    },
+];
 
 export default function Page() {
     return (
@@ -33,7 +39,7 @@ export default function Page() {
                         Basic Information
                     </h2>
                     <div className="flex flex-col lg:flex-row justify-around items-center">
-                        <Status status="paused" size="lg" />
+                        <Status status="inprogress" size="lg" />
                         <Repo repo="" size="lg" />
                     </div>
                     <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row justify-center items-center mt-6">

@@ -47,7 +47,7 @@ export default function Page() {
                         title="BlackMessages"
                         description="BlackMessages is a location based chat app. Designed for people who want to chat with others in their area."
                         languages={["dart", "flutter"]}
-                        status="paused"
+                        status="inprogress"
                         by="OmegaSpaceDev"
                         link="/projects/blackmessages"
                     />
