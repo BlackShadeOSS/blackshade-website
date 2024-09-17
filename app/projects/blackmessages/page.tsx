@@ -91,7 +91,7 @@ export default function Page() {
                 </motion.div>
                 <PhotosGalery
                     folder="blackmessages"
-                    collumns={2}
+                    collumns={3}
                     photos={photos}
                 />
             </section>
