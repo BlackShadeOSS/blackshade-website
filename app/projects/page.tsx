@@ -15,18 +15,9 @@ export default function Page() {
                 id="projects"
             >
                 <h2 className="text-5xl text-center font-bold text-white lg:text-6xl mb-10">
-                    All Projects
+                    Personal Projects
                 </h2>
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                    <Card
-                        title="Daito Stories"
-                        description="Daito Stories is 2.5D dungeon crawler game made in Unreal Engine 5. 
-                        More information soon."
-                        languages={["cpp", "ue5"]}
-                        status="inprogress"
-                        by="OmegaSpaceDev"
-                        link="/projects/daitostories"
-                    />
                     <Card
                         title="LMCSS"
                         description="LMCSS is a unity script that dynamicly updates a list of toggles so user can select a input device. It's designed for local multiplayer games."
@@ -44,22 +35,6 @@ export default function Page() {
                         link="/projects/mecb"
                     />
                     <Card
-                        title="BlackMessages"
-                        description="BlackMessages is a location based chat app. Designed for people who want to chat with others in their area."
-                        languages={["dart", "flutter"]}
-                        status="inprogress"
-                        by="OmegaSpaceDev"
-                        link="/projects/blackmessages"
-                    />
-                    <Card
-                        title="Navix"
-                        description="Navix is a modular avionics board for OmegaSpaceSystems. It's designed to be used in various aerospace projects."
-                        languages={["kicad", "hardware"]}
-                        status="paused"
-                        by="OmegaSpaceSystems"
-                        link="/projects/navix"
-                    />
-                    <Card
                         title="Space Odyssey 2"
                         description="Space Odyssey 2 is a space race game made using Canvas. It was made as a final project for my first year of high school."
                         languages={["html", "css", "javascript"]}
@@ -67,22 +42,6 @@ export default function Page() {
                         repo="github.com/BlackShadeOSS/Space-Odyssey-2"
                         by="BlackShade"
                         link="/projects/spaceodyssey2"
-                    />
-                    <Card
-                        title="Liquid Rocket Engine"
-                        description="Liquid Rocket Engine is project that focuses on creating a liquid rocket engine that uses liquid nitrus oxide and ethanol as fuel."
-                        languages={["fusion360", "rpa", "hardware"]}
-                        status="paused"
-                        by="OmegaSpaceSystems"
-                        link="/projects/liquid-rocket-engine"
-                    />
-                    <Card
-                        title="Sagas of Mankind"
-                        description="Sagas Of Mankind is a fascinating evolutionary-strategic game in which players lead their civilization through centuries of evolution and adapt to the changing environment."
-                        languages={["cpp", "ue5"]}
-                        status="paused"
-                        by="OmegaSpaceDev"
-                        link="/projects/sagas-of-mankind"
                     />
                 </div>
                 <div className="flex justify-center items-center gap-4 h-28 mt-10">
@@ -97,6 +56,30 @@ export default function Page() {
                         <span className="bg-ashgrey px-5 py-3 lg:px-12 lg:py-6 rounded-full text-xl lg:text-3xl font-semibold ">
                             More Projects Coming Soon...
                         </span>
+                    </motion.div>
+                </div>
+                <h2 className="text-5xl text-center font-bold text-white lg:text-6xl mt-10 mb-5">
+                    Team Projects
+                </h2>
+                {/* This is the added motion div */}
+                <div className="flex flex-col justify-center items-center gap-4 bg-ashgrey rounded-2xl p-10 h-fit w-full xl:w-2/3 mx-auto">
+                    <p className="text-3xl text-white text-center mb-5 w-full xl:w-2/3">
+                        All team projects that I have worked on can be found on
+                        the OmegaSpaceTeam website.
+                    </p>
+                    <motion.div
+                        whileHover={{ scale: 1.025 }}
+                        transition={{ duration: 0.25 }}
+                        className="hover:cursor-pointer text-white hover:text-sky-400 duration-500 my-10"
+                    >
+                        <Link
+                            href={"https://www.omegaspaceteam.tech/projects"}
+                            target="_blank"
+                        >
+                            <span className="bg-deepnavyblue px-5 py-3 lg:px-12 lg:py-6 rounded-full text-xl lg:text-3xl font-semibold ">
+                                See Team Projects Here
+                            </span>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.section>

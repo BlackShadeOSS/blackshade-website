@@ -17,8 +17,12 @@ export default function Page() {
             >
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.75 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1.5,
+                    }}
                     className="flex flex-col gap-4"
                 >
                     <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-left">
@@ -26,8 +30,13 @@ export default function Page() {
                     </h2>
                     <motion.p
                         initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.75, delay: 0.25 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1.5,
+                            delay: 0.25,
+                        }}
                         className="text-xl text-white text-center lg:text-left"
                     >
                         I am a beginner software developer from Poland. I mainly
@@ -38,8 +47,13 @@ export default function Page() {
 
                     <motion.p
                         initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.75, delay: 0.5 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1.5,
+                            delay: 0.5,
+                        }}
                         className="text-xl text-white text-center lg:text-left"
                     >
                         In the internet I am known as BlackShade or
@@ -48,9 +62,13 @@ export default function Page() {
                     </motion.p>
                 </motion.div>
                 <motion.div
-                    initial={{ opacity: 0, x: +100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.75 }}
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1.5,
+                    }}
                 >
                     <Image
                         src="/avatar-round.png"
@@ -67,8 +85,13 @@ export default function Page() {
             >
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.75, delay: 1 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1.5,
+                        delay: 0.25,
+                    }}
                     className="order-last lg:order-first"
                 >
                     <Image
@@ -80,18 +103,28 @@ export default function Page() {
                     />
                 </motion.div>
                 <motion.div
-                    initial={{ opacity: 0, x: +100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.75, delay: 1 }}
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1.5,
+                        delay: 0.25,
+                    }}
                     className="flex flex-col gap-4 text-right"
                 >
                     <h2 className="text-5xl text-center font-bold text-white lg:text-6xl lg:text-right">
                         OmegaSpace Team
                     </h2>
                     <motion.p
-                        initial={{ opacity: 0, x: +100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.75, delay: 1.25 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1.5,
+                            delay: 0.25,
+                        }}
                         className="text-xl text-white text-center lg:text-right"
                     >
                         OmegaSpace Team is a multipart group of people
@@ -99,9 +132,14 @@ export default function Page() {
                     </motion.p>
 
                     <motion.div
-                        initial={{ opacity: 0, x: +100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.75, delay: 1.5 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1.5,
+                            delay: 0.25,
+                        }}
                     >
                         <p className="text-xl text-white text-center lg:text-left">
                             We are made up of two departments which are listed
@@ -120,9 +158,14 @@ export default function Page() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: +100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.75, delay: 1.75 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1.5,
+                            delay: 0.25,
+                        }}
                         className="text-xl text-white text-center mb-10 lg:mb-0"
                     >
                         <motion.div
@@ -130,7 +173,10 @@ export default function Page() {
                             transition={{ duration: 0.25 }}
                             className="hover:cursor-pointer text-white hover:text-sky-400 duration-500"
                         >
-                            <Link href={"/omegaspaceteam"}>
+                            <Link
+                                href={"https://www.omegaspaceteam.tech"}
+                                target="_blank"
+                            >
                                 <span className="bg-ashgrey px-6 py-3 rounded-lg text-2xl lg:text-xl font-semibold">
                                     Learn more
                                 </span>
@@ -141,8 +187,13 @@ export default function Page() {
             </section>
             <motion.section
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 2 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                    type: "spring",
+                    duration: 1.5,
+                    delay: 0.25,
+                }}
                 className="flex flex-col gap-8 mt-10"
                 id="projects"
             >
@@ -192,8 +243,13 @@ export default function Page() {
             </motion.section>
             <motion.section
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                    type: "spring",
+                    duration: 1.5,
+                    delay: 0.25,
+                }}
                 className="flex flex-col gap-8 mt-10"
                 id="contact"
             >
@@ -230,8 +286,13 @@ export default function Page() {
             </motion.section>
             <motion.section
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                    type: "spring",
+                    duration: 1.5,
+                    delay: 0.25,
+                }}
                 className="flex flex-col gap-8 mt-10"
                 id="supportme"
             >

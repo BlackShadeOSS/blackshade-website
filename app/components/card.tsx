@@ -25,6 +25,7 @@ const byLogo = {
     BlackShade: "/avatar-round.png",
     OmegaSpaceDev: "/OSD-logo.svg",
     OmegaSpaceSystems: "/OSS-logo.svg",
+    OST_CanSatTeam: "/CanSat-logo.svg",
 };
 
 export default function Card({

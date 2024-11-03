@@ -23,7 +23,10 @@ const NavBar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/omegaspaceteam">
+                        <Link
+                            href="https://www.omegaspaceteam.tech"
+                            target="_blank"
+                        >
                             <span className="px-3 py-2 text-white text-2xl">
                                 OmegaSpaceTeam
                             </span>

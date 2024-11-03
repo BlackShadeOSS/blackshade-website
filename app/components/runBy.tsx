@@ -13,6 +13,14 @@ const byLogo = {
     BlackShade: "/avatar-round.png",
     OmegaSpaceDev: "/OSD-logo.svg",
     OmegaSpaceSystems: "/OSS-logo.svg",
+    OST_CanSatTeam: "/CanSat-logo.svg",
+};
+
+const byText = {
+    BlackShade: "BlackShade",
+    OmegaSpaceDev: "OmegaSpaceDev",
+    OmegaSpaceSystems: "OmegaSpaceSystems",
+    OST_CanSatTeam: "OST CanSatGroup",
 };
 
 export default function runBy({ by, size = "sm" }: RunByProps) {
@@ -29,7 +37,7 @@ export default function runBy({ by, size = "sm" }: RunByProps) {
                 className="inline-block mr-4"
             />
             <span className="text-2xl text-white text-center lg:text-left lg:text-4xl">
-                {by}
+                {byText[by]}
             </span>
         </div>
     );

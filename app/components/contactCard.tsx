@@ -15,6 +15,9 @@ const logos = {
     email: "/email-logo.svg",
     x: "/x-logo.svg",
     linkedin: "/linkedin-logo.svg",
+    instagram: "/instagram-logo.svg",
+    tiktok: "/tiktok-logo.svg",
+    youtube: "/youtube-logo.svg",
 };
 
 export default function ContactCard({ title, link, logo }: ContactCardProps) {
@@ -33,7 +36,7 @@ export default function ContactCard({ title, link, logo }: ContactCardProps) {
                             width={40}
                             height={40}
                         />
-                        <h3 className="text-left text-2xl 2xl:text-3xl px-4">
+                        <h3 className="text-left text-3xl 2xl:text-4xl px-4">
                             {title}
                         </h3>
                     </div>
