@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pl" className="scroll-smooth overflow-x-hidden">
-            <body className="">
+            <body className="text-white">
                 <div className="h-full w-full bg-coalblack">
                     <div className="container mx-auto flex h-full min-h-screen flex-col px-8 py-4 bg-coalblack">
                         <NavBar />
